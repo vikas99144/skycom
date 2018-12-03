@@ -1,0 +1,43 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="row">
+     <div class="col-md-3" style=" background-color:lightblue; height: 100%"}>
+       <h1 style="color: blue">SYCOM.com</h1><hr>
+      <label for="search" style="font-size: 18">search....</label>
+      <input type="text" style="border-left: 10px; width:80%; height:30px;">
+      <button type="button" style="height: 30px; width:50px;">
+        <i class="fa fa-search"></i>
+      </button>
+       <% if(typeof(data) !== 'undefined'){
+         data.forEach((user)=>{ %>
+        <div id="user"><%= user.username %></div><br>
+        <input type="hidden" id="userid" value="<%= user._id %>">
+        <% });} %>
+     </div>
+     <div class="col-md-9">
+       <div id="chatting">
+      <textarea rows="4" cols="50">
+      <input type="text"><button>sned</button>
+
+     </div>
+   </div>
+
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#user").click(function(){
+        $("#chatting").show;
+    });
+    $("#chatting").hide;
+});
+
+</script>
