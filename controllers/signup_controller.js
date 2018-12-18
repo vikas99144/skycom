@@ -1,4 +1,6 @@
-const User = require('../modals/users');
+const mongoose = require('mongoose');
+const userSchema = require('../modals/users');
+const User = mongoose.model('user',userSchema);
 const bcrypt = require('bcryptjs');
 
 exports.getSignup = (req,res)=>{

@@ -6,4 +6,4 @@ var userSchema = new mongoose.Schema({
     password:String,
     profileImage:String
 })
-module.exports = mongoose.model('user', userSchema);
+module.exports = userSchema;

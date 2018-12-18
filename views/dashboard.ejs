@@ -9,7 +9,7 @@
 <body>
   <div class="row">
      <div class="col-md-3" style=" background-color:lightblue; height: 100%"}>
-       <h1 style="color: blue">SYCOM.com</h1><hr>
+       <h1 style="color: blue">SKYCOM.com</h1><hr>
       <label for="search" style="font-size: 18">search....</label>
       <input type="text" style="border-left: 10px; width:80%; height:30px;">
       <button type="button" style="height: 30px; width:50px;">
@@ -17,14 +17,14 @@
       </button>
        <% if(typeof(data) !== 'undefined'){
          data.forEach((user)=>{ %>
-        <div id="user"><%= user.username %></div><br>
+        <button id="user"><%= user.username %></button><br>
         <input type="hidden" id="userid" value="<%= user._id %>">
         <% });} %>
      </div>
      <div class="col-md-9">
        <div id="chatting">
-      <textarea rows="4" cols="50">
-      <input type="text"><button>sned</button>
+      <!-- <textarea rows="4" cols="50"> -->
+      <input type="text"><button>send</button>
 
      </div>
    </div>
@@ -32,12 +32,14 @@
 </body>
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
     $("#user").click(function(){
         $("#chatting").show;
+        alert("click is working on userid click");
     });
-    $("#chatting").hide;
+    // $("#chatting").hide;
 });
 
 </script>

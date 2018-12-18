@@ -4,7 +4,10 @@ const signupController = require('../controllers/signup_controller');
 const loginController = require('../controllers/login_controller');
 const indexController = require('../controllers/index_controller');
 const dashboardController = require('../controllers/dashboard_controller');
+// const socketController = require('../controllers/socket');
+
 router.get('/',indexController.indexPage);
+// router.get('/socket',socketController);
 
 
 router.get('/signup',signupController.getSignup);
