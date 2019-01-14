@@ -1,4 +1,4 @@
-====================================get nearby of 10 km range ===========================================================================
+====================================get nearby driver of 10 km range ===========================================================================
 /* let sqlQry = `select driver.id,driver.car_type,driver.name,driver.mobile,driver.profile_pic,driver.latitude,driver.longitude,
 +(6371 * acos (cos ( radians(driver.latitude)) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(driver.longitude))  
 + sin ( radians(latitude) ) * sin( radians(driver.latitude)))) 
