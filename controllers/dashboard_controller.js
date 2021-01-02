@@ -1,4 +1,4 @@
-const User = require('../modals/users');
+const User = require('../modals/user');
 
 exports.getDashboard = (req,res)=>{
   User.find({}).exec((err,data)=>{

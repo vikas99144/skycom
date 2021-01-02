@@ -4,6 +4,14 @@ var userSchema = new mongoose.Schema({
     name:String,
     email:String,
     password:String,
-    profileImage:String
-})
-module.exports = userSchema;
+    socket_id:{
+        type:String,
+        default: null
+    }
+});
+
+
+module.exports = mongoose.model('user',userSchema,'user');
+
+
+

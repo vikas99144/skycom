@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-const userSchema = require('../modals/users');
-const User = mongoose.model('user',userSchema);
+const User = require('../modals/user');
 const bcrypt = require('bcryptjs');
 
 exports.getSignup = (req,res)=>{
@@ -35,7 +34,10 @@ exports.postSignup = (req, res)=>{
                         res.render('signup',{message:"Data is not saved in database."});
                     } else {
                       console.log("Data saved successfully.");
-                        res.render('signup',{message: "Data saved successfully."});
+                      res.json({
+                        message:' data saved successfully'
+                      })
+                        // res.render('signup',{message: "Data saved successfully."});
                     }
                 })
 
